@@ -1,15 +1,14 @@
 package com.sonu.composebasic
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.sonu.composebasic.ui.theme.ComposeBasicTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,30 +16,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeBasicTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Greeting("Android")
+                    Text(text = "Dialog", modifier = Modifier.clickable {
+                        startActivity(Intent(this@MainActivity, DialogCompose::class.java))
+                    })
+                    Text(text = "Biometric", modifier = Modifier.clickable {
+                        startActivity(Intent(this@MainActivity, BiometricCompose::class.java))
+                    })
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposeBasicTheme {
-        Greeting("Android")
     }
 }

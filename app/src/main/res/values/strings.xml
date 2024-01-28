@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ComposeBasic</string>
+    <string name="title_activity_dialog_compose">DialogCompose</string>
+    <string name="title_activity_biometric_compose">BiometricCompose</string>
 </resources>
