@@ -28,6 +28,11 @@
             android:label="@string/title_activity_dialog_compose"
             android:theme="@style/Theme.ComposeBasic" />
         <activity
+            android:name=".BottomSheet"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_sheet"
+            android:theme="@style/Theme.ComposeBasic" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

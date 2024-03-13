@@ -3,4 +3,5 @@
     <string name="title_activity_dialog_compose">DialogCompose</string>
     <string name="title_activity_biometric_compose">BiometricCompose</string>
     <string name="title_activity_shimmer">Shimmer</string>
+    <string name="title_activity_bottom_sheet">BottomSheet</string>
 </resources>
